@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'taiwan_endemic_species.dart';
+import 'package:flutter_hw4_1_taicol/taiwan_endemic_plant.dart';
 
 class DetailPage extends StatelessWidget {
-  final TaiwanEndemicSpecies species;
+  final TaiwanEndemicPlant plants;
 
   const DetailPage({
     super.key,
-    required this.species,
+    required this.plants,
   });
 
   @override
@@ -15,7 +15,7 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 21, 55, 24),
         title: Text(
-          species.name,
+          plants.name,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -29,7 +29,7 @@ class DetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              species.image,
+              plants.image,
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
@@ -40,7 +40,7 @@ class DetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    species.name,
+                    plants.name,
                     style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class DetailPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    species.description,
+                    plants.description,
                     style: const TextStyle(fontSize: 16),
                   ),
                 ],

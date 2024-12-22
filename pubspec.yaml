@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.2.5
+  google_fonts: ^6.2.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -72,6 +74,21 @@ flutter:
     - assets/龜殼花.jpg
     - assets/MOG_banner.jpg
     - assets/MOA_logo.png
+    - assets/伊藤氏原始觀音座蓮.jpg
+    - assets/台灣捲瓣蘭.jpg
+    - assets/屏東豆蘭.jpg
+    - assets/山檳榔.jpg
+    - assets/桃紅蝴蝶蘭.jpg
+    - assets/梅山口鐵線蕨.jpg
+    - assets/烏來杜鵑.jpg
+    - assets/無毛捲瓣蘭.jpg
+    - assets/白花蝴蝶蘭.jpg
+    - assets/紅花石斛.jpg
+    - assets/輻形根節蘭.jpg
+    - assets/野小百合.jpg
+    - assets/雅美萬代蘭.jpg
+    - assets/黃鶴頂蘭.jpg
+    - assets/Profile.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
