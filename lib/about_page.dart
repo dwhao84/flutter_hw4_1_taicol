@@ -35,51 +35,63 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          padding: const EdgeInsets.symmetric(vertical: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                    ),
-                  ],
-                ),
-                // 在子類別裡面把照片裁成圓形
-                child: const ShowMyProfile(),
-              ),
-              // 加上SizedBox
-              const SizedBox(height: 20),
-              // 加上自己的名字
-              const MyName(),
-              // 加上SizedBox
-              const SizedBox(height: 10),
-              // 軟體工程師的標題。
-              const MyTitle(),
-              const SizedBox(height: 15),
-              // 自我介紹的內容。
-              const SelfIntro(),
-              // 顯示Rich Text
-              const MyTechStackRichText(),
-              // 加上SizedBox
-              const SizedBox(height: 20),
-              const ShowMyContent(),
-            ],
-          ),
+          physics: AlwaysScrollableScrollPhysics(),
+          padding: EdgeInsets.symmetric(vertical: 30),
+          child: CustomColumn(),
         ),
       ),
+    );
+  }
+}
+
+// Custom Column
+class CustomColumn extends StatelessWidget {
+  const CustomColumn({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 2,
+                blurRadius: 5,
+              ),
+            ],
+          ),
+          // 在子類別裡面把照片裁成圓形
+          child: const ShowMyProfile(),
+        ),
+        // 加上SizedBox
+        const SizedBox(height: 20),
+        // 加上自己的名字
+        const MyName(),
+        // 加上SizedBox
+        const SizedBox(height: 10),
+        // 軟體工程師的標題。
+        const MyTitle(),
+        const SizedBox(height: 15),
+        // 自我介紹的內容。
+        const SelfIntro(),
+        // 顯示Rich Text
+        const MyTechStackRichText(),
+        // 加上SizedBox
+        const SizedBox(height: 20),
+        const ShowMyContent(),
+      ],
     );
   }
 }
