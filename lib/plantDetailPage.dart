@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hw4_1_taicol/taiwan_endemic_plant.dart';
 
-class DetailPage extends StatelessWidget {
+class PlantDetailPage extends StatelessWidget {
   final TaiwanEndemicPlant plants;
 
-  const DetailPage({
+  const PlantDetailPage({
     super.key,
     required this.plants,
   });
@@ -28,35 +28,95 @@ class DetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              plants.image,
-              width: double.infinity,
-              height: 250,
-              fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    plants.name,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    plants.description,
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                ],
-              ),
-            ),
+            PlantImage(plants: plants),
+            CustomPadding(plants: plants),
           ],
         ),
       ),
+    );
+  }
+}
+
+// Custom Padding
+class CustomPadding extends StatelessWidget {
+  const CustomPadding({
+    super.key,
+    required this.plants,
+  });
+
+  final TaiwanEndemicPlant plants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          PlantName(plants: plants),
+          const SizedBox(height: 8),
+          PlantDescription(plants: plants),
+        ],
+      ),
+    );
+  }
+}
+
+// Plant Image
+class PlantImage extends StatelessWidget {
+  const PlantImage({
+    super.key,
+    required this.plants,
+  });
+
+  final TaiwanEndemicPlant plants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      plants.image,
+      width: double.infinity,
+      height: 250,
+      fit: BoxFit.cover,
+    );
+  }
+}
+
+// Plant Name
+class PlantName extends StatelessWidget {
+  const PlantName({
+    super.key,
+    required this.plants,
+  });
+
+  final TaiwanEndemicPlant plants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      plants.name,
+      style: const TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+// Plant Image
+class PlantDescription extends StatelessWidget {
+  const PlantDescription({
+    super.key,
+    required this.plants,
+  });
+
+  final TaiwanEndemicPlant plants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      plants.description,
+      style: const TextStyle(fontSize: 16),
     );
   }
 }

@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hw4_1_taicol/plantDetailPage.dart';
 import 'package:flutter_hw4_1_taicol/taiwan_endemic_plant.dart';
 import 'package:flutter_hw4_1_taicol/taiwan_endemic_species.dart';
 
@@ -29,6 +30,15 @@ class PlantList extends StatelessWidget {
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
           subtitle: Text(taiwanEndemicPlants[index].description),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => PlantDetailPage(
+                  plants: taiwanEndemicPlants[index],
+                ),
+              ),
+            );
+          },
         );
       },
     );
