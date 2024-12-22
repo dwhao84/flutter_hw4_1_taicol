@@ -1,6 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_hw4_1_taicol/about_me.dart';
 import 'package:flutter_hw4_1_taicol/species_list.dart';
+import 'package:flutter_hw4_1_taicol/taiwan_plant.dart';
+import 'package:flutter_hw4_1_taicol/taiwan_species.dart';
 import 'plant_list.dart';
 // import 'taiwan_endemic_species.dart';
 import 'about_page.dart';
@@ -64,102 +67,6 @@ class _SecondPageState extends State<SecondPage> {
             const Color.fromARGB(255, 21, 55, 24), // Match app bar color
         unselectedItemColor: Colors.grey,
       ),
-    );
-  }
-}
-
-// Row for Taiwan Species
-class TaiwanSpecies extends StatelessWidget {
-  const TaiwanSpecies({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          "assets/MOA_logo.png",
-          fit: BoxFit.contain,
-          height: 32,
-        ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: const Text(
-            '台灣特有動物',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// Row for Taiwan Plant
-class TaiwanPlant extends StatelessWidget {
-  const TaiwanPlant({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          "assets/MOA_logo.png",
-          fit: BoxFit.contain,
-          height: 32,
-        ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: const Text(
-            '台灣特有植物',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// Row for About me
-class AboutMe extends StatelessWidget {
-  const AboutMe({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          "assets/MOA_logo.png",
-          fit: BoxFit.contain,
-          height: 32,
-        ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: const Text(
-            '關於我',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
