@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw4_1_taicol/my_name.dart';
-import 'package:flutter_hw4_1_taicol/my_tech_stack_rich_text.dart';
-import 'package:flutter_hw4_1_taicol/my_title.dart';
-import 'package:flutter_hw4_1_taicol/self_intro.dart';
-import 'package:flutter_hw4_1_taicol/show_my_content.dart';
-import 'package:flutter_hw4_1_taicol/show_my_profile.dart';
+import 'package:flutter_hw4_1_taicol/about_me/my_name.dart';
+import 'package:flutter_hw4_1_taicol/about_me/my_tech_stack_rich_text.dart';
+import 'package:flutter_hw4_1_taicol/about_me/my_title.dart';
+import 'package:flutter_hw4_1_taicol/about_me/self_intro.dart';
+import 'package:flutter_hw4_1_taicol/about_me/show_my_content.dart';
+import 'package:flutter_hw4_1_taicol/about_me/show_my_profile.dart';
 import 'package:url_launcher/url_launcher.dart'; // 加上url_launcher.dart 才有辦法開啟網頁
 import 'package:google_fonts/google_fonts.dart'; // 加上google_font的package
 

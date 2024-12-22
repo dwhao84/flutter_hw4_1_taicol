@@ -1,12 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hw4_1_taicol/plantDetailPage.dart';
-import 'package:flutter_hw4_1_taicol/taiwan_endemic_plant.dart';
-import 'package:flutter_hw4_1_taicol/taiwan_endemic_species.dart';
+import 'package:flutter_hw4_1_taicol/detail_pages/speciesDetailPage.dart';
+import 'package:flutter_hw4_1_taicol/datas/taiwan_endemic_species.dart';
 
-class PlantList extends StatelessWidget {
-  const PlantList({super.key});
+class SpeciesList extends StatelessWidget {
+  const SpeciesList({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,22 +20,24 @@ class PlantList extends StatelessWidget {
         color: Color.fromARGB(255, 198, 198, 198),
         thickness: 1,
       ),
-      itemBuilder: (BuildContext context, int index) {
+      itemBuilder: (context, index) {
         return ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundImage: AssetImage(taiwanEndemicPlants[index].image),
+            backgroundImage: AssetImage(taiwanEndemicSpecies[index].image),
           ),
           title: Text(
-            taiwanEndemicPlants[index].name,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            taiwanEndemicSpecies[index].name,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          subtitle: Text(taiwanEndemicPlants[index].description),
+          subtitle: Text(taiwanEndemicSpecies[index].description),
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => PlantDetailPage(
-                  plants: taiwanEndemicPlants[index],
+                builder: (context) => DetailPage(
+                  species: taiwanEndemicSpecies[index],
                 ),
               ),
             );

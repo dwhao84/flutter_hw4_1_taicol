@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'taiwan_endemic_species.dart';
+import '../datas/taiwan_endemic_species.dart';
 
 class DetailPage extends StatelessWidget {
   final TaiwanEndemicSpecies species;

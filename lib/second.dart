@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_hw4_1_taicol/about_me.dart';
-import 'package:flutter_hw4_1_taicol/species_list.dart';
-import 'package:flutter_hw4_1_taicol/taiwan_plant.dart';
-import 'package:flutter_hw4_1_taicol/taiwan_species.dart';
-import 'plant_list.dart';
+import 'package:flutter_hw4_1_taicol/rows/about_me.dart';
+import 'package:flutter_hw4_1_taicol/lists/species_list.dart';
+import 'package:flutter_hw4_1_taicol/rows/taiwan_plant.dart';
+import 'package:flutter_hw4_1_taicol/rows/taiwan_species.dart';
+import 'lists/plant_list.dart';
 // import 'taiwan_endemic_species.dart';
 import 'about_page.dart';
 
