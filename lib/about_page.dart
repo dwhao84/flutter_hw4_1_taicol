@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hw4_1_taicol/my_name.dart';
+import 'package:flutter_hw4_1_taicol/my_tech_stack_rich_text.dart';
+import 'package:flutter_hw4_1_taicol/my_title.dart';
+import 'package:flutter_hw4_1_taicol/self_intro.dart';
+import 'package:flutter_hw4_1_taicol/show_my_content.dart';
+import 'package:flutter_hw4_1_taicol/show_my_profile.dart';
 import 'package:url_launcher/url_launcher.dart'; // 加上url_launcher.dart 才有辦法開啟網頁
 import 'package:google_fonts/google_fonts.dart'; // 加上google_font的package
 
@@ -74,146 +80,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-// 顯示我個人照片
-class ShowMyProfile extends StatelessWidget {
-  const ShowMyProfile({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipOval(
-      child: Image.asset(
-        // 顯示我的大頭照
-        'assets/Profile.jpg',
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-}
-
-class MyName extends StatelessWidget {
-  const MyName({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text(
-      'Dawei',
-      style: TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
-    );
-  }
-}
-
-class MyTitle extends StatelessWidget {
-  const MyTitle({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text(
-      '軟體工程師',
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.grey,
-      ),
-    );
-  }
-}
-
-class SelfIntro extends StatelessWidget {
-  const SelfIntro({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40),
-      child: Text(
-        '喜歡做點有趣App的App工程師!?',
-        textAlign: TextAlign.left,
-        style: TextStyle(
-          fontSize: 16,
-          color: Colors.black87,
-        ),
-      ),
-    );
-  }
-}
-
-class MyTechStackRichText extends StatelessWidget {
-  const MyTechStackRichText({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-      textAlign: TextAlign.left,
-      text: const TextSpan(
-        style: TextStyle(color: Color.fromARGB(221, 91, 91, 91)),
-        children: [
-          TextSpan(
-            text: '\n專長領域：\n',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-          ),
-          TextSpan(
-            text: 'Mobile App 開發\n',
-            style: TextStyle(fontSize: 16),
-          ),
-          TextSpan(
-            text: 'Flutter / iOS / Python',
-            style: TextStyle(fontSize: 16),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ShowMyContent extends StatelessWidget {
-  const ShowMyContent({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // 顯示我個人網頁的icon
-        IconButton(
-          icon: const Icon(Icons.public),
-          onPressed: () {
-            // Call show portfoilo
-            showMyPortfoilo();
-          },
-        ),
-        const SizedBox(width: 20),
-        // 顯示我個人GitHub的icon
-        IconButton(
-            icon: const Icon(Icons.terminal),
-            onPressed: () {
-              // Call show GitHub function
-              showGitHub();
-            }),
-      ],
     );
   }
 }
