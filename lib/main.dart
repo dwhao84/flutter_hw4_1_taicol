@@ -5,6 +5,7 @@ void main() {
   runApp(const MyApp());
 }
 
+// 設定 Material app：
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -30,12 +31,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // initializer
   @override
   void initState() {
     super.initState();
     _navigateToNextPage();
   }
 
+  // MARK: - 畫面自動傳到下一頁。
   Future<void> _navigateToNextPage() async {
     await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
@@ -49,11 +52,14 @@ class _MyHomePageState extends State<MyHomePage> {
             child: child,
           );
         },
+        // 轉換 500 毫秒
         transitionDuration: const Duration(milliseconds: 500),
       ),
     );
   }
 
+// 製作Widget的頁面：
+// 顯示 農業部的logo。
   @override
   Widget build(BuildContext context) {
     return Scaffold(
